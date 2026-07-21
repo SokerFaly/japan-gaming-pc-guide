@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CS2をやりたい人への パソコン＆モニター選び ｜ 日本・2026年7月</title>
+<style>
+  :root{
+    --paper:#F1EDE3; --paper-2:#F7F4EC; --card:#FBF9F3;
+    --ink:#2B2824; --ink-soft:#5A554C; --muted:#938C7F;
+    --rule:#DBD4C5; --rule-strong:#C7BFAD;
+    --brick:#8A3A2E; --brick-soft:#B98A7E; --slate:#5F7486;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{ margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Helvetica Neue","Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Noto Sans SC",system-ui,sans-serif;
+    font-size:15px; line-height:1.75; -webkit-font-smoothing:antialiased; }
+  a{color:inherit;}
+  .wrap{max-width:1000px; margin:0 auto; padding:0 26px;}
+  h1,h2,h3,h4,p{margin:0;}
+  .tag{ display:inline-block; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--muted); border:1px solid var(--rule-strong); border-radius:2px; padding:3px 9px; background:var(--paper-2); }
+
+  .strip{ border-bottom:1px solid var(--rule); background:var(--paper-2); }
+  .strip .wrap{ display:flex; flex-wrap:wrap; gap:6px 18px; justify-content:space-between; align-items:center;
+    padding:11px 26px; font-size:12px; color:var(--muted); letter-spacing:.03em; }
+  .strip .note{ color:var(--ink-soft); }
+
+  .hero{ padding:52px 0 34px; }
+  .hero .eyebrow{ color:var(--muted); font-size:12px; letter-spacing:.2em; text-transform:uppercase; }
+  .hero h1{ font-size:clamp(26px,4.6vw,40px); font-weight:500; line-height:1.3; margin:16px 0 14px; max-width:24ch; }
+  .hero p{ color:var(--ink-soft); max-width:56ch; }
+
+  section{ padding:42px 0; border-top:1px solid var(--rule); }
+  .sec-head{ display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:22px; }
+  .sec-head h2{ font-size:clamp(20px,3vw,26px); font-weight:500; }
+  .sec-head .sub{ color:var(--ink-soft); font-size:14px; max-width:52ch; }
+  .num{ color:var(--muted); font-variant-numeric:tabular-nums; font-size:13px; border:1px solid var(--rule-strong);
+    border-radius:2px; padding:2px 8px; }
+
+  /* three keys */
+  .keys{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .keycard{ background:var(--card); border:1px solid var(--rule); border-radius:4px; padding:18px 18px 16px; }
+  .keycard .kk{ font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+  .keycard h3{ font-size:17px; font-weight:600; margin:6px 0 6px; }
+  .keycard p{ font-size:13px; color:var(--ink-soft); }
+  .keycard .ex{ margin-top:10px; font-size:12px; color:var(--muted); border-top:1px dashed var(--rule-strong); padding-top:9px; }
+  .triangle-note{ margin-top:16px; background:var(--paper-2); border:1px solid var(--rule); border-left:3px solid var(--brick);
+    border-radius:4px; padding:14px 16px; font-size:13.5px; color:var(--ink-soft); }
+  .triangle-note b{ color:var(--ink); }
+
+  /* radar block */
+  .radar-grid{ display:grid; grid-template-columns:minmax(0,360px) minmax(0,1fr); gap:24px; align-items:start; }
+  .radar-wrap{ background:var(--card); border:1px solid var(--rule); border-radius:4px; padding:14px 10px 12px; }
+  .radar{ width:100%; height:auto; display:block; }
+  .legend{ display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:4px; padding-top:10px; border-top:1px solid var(--rule); }
+  .lg{ display:inline-flex; align-items:center; gap:7px; font-size:12.5px; color:var(--ink-soft); }
+  .lg i{ width:14px; height:14px; border-radius:3px; display:inline-block; }
+  .axnote{ display:grid; gap:9px; }
+  .axnote .an{ background:var(--paper-2); border:1px solid var(--rule); border-radius:4px; padding:11px 13px; }
+  .axnote .an h4{ font-size:13.5px; font-weight:600; margin-bottom:2px; }
+  .axnote .an h4 small{ font-weight:400; color:var(--muted); font-size:11.5px; letter-spacing:.02em; }
+  .axnote .an p{ font-size:12.5px; color:var(--ink-soft); }
+
+  /* product cards */
+  .cards{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+  .pcard{ background:var(--card); border:1px solid var(--rule); border-radius:5px; padding:20px; display:grid; gap:11px; align-content:start; }
+  .pcard.primary{ border-color:var(--brick); box-shadow:inset 0 0 0 1px var(--brick); }
+  .pc-badge{ font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--muted); }
+  .pcard h4{ font-size:17px; font-weight:600; line-height:1.35; }
+  .pc-model{ font-size:11.5px; color:var(--muted); letter-spacing:.02em; margin-top:-4px; }
+  .pc-sub{ font-size:13px; color:var(--ink-soft); }
+  .pc-spec{ margin:0; padding:0; list-style:none; display:grid; gap:3px; font-size:13px; color:var(--ink); }
+  .pc-spec li{ padding-left:14px; position:relative; }
+  .pc-spec li::before{ content:""; position:absolute; left:2px; top:.62em; width:5px; height:5px; background:var(--rule-strong); border-radius:1px; }
+  .pc-price{ display:flex; align-items:baseline; gap:10px; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:9px 0; }
+  .pc-price b{ font-size:20px; font-weight:600; font-variant-numeric:tabular-nums; }
+  .pc-price span{ font-size:11.5px; color:var(--muted); }
+  .pc-meta{ display:flex; flex-wrap:wrap; gap:7px; }
+  .chip{ font-size:11px; letter-spacing:.02em; color:var(--ink-soft); border:1px solid var(--rule-strong); background:var(--paper-2); border-radius:2px; padding:3px 8px; }
+  .chip.soft{ color:var(--muted); }
+  .pc-who{ font-size:12.5px; color:var(--ink-soft); }
+  .pc-who b{ color:var(--ink); }
+  .pc-pn{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .pc-pros .ph,.pc-cons .ph{ font-size:11px; letter-spacing:.06em; color:var(--muted); }
+  .pc-pros .ph{ color:var(--brick); }
+  .pc-pn ul{ margin:4px 0 0; padding-left:1.05em; font-size:12px; color:var(--ink-soft); display:grid; gap:3px; }
+  .pc-note{ font-size:11.5px; color:var(--muted); background:var(--paper-2); border:1px solid var(--rule); border-radius:3px; padding:8px 10px; }
+  .pc-links{ display:flex; flex-wrap:wrap; gap:9px; margin-top:2px; }
+  .btn{ text-decoration:none; font-size:13px; letter-spacing:.02em; padding:9px 16px; border-radius:3px;
+    background:var(--ink); color:var(--paper); border:1px solid var(--ink); }
+  .btn.ghost{ background:transparent; color:var(--ink-soft); border-color:var(--rule-strong); }
+  .btn:hover{ opacity:.9; }
+
+  /* decision */
+  .decide{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .dbox{ background:var(--card); border:1px solid var(--rule); border-radius:4px; padding:18px; }
+  .dbox h3{ font-size:15px; font-weight:600; margin-bottom:10px; }
+  .drow{ display:grid; grid-template-columns:auto 1fr; gap:10px; align-items:start; padding:8px 0; border-top:1px solid var(--rule); font-size:13px; }
+  .drow:first-of-type{ border-top:0; }
+  .drow .q{ color:var(--ink-soft); }
+  .drow .a{ color:var(--ink); font-weight:600; }
+  .combos{ margin-top:14px; background:var(--paper-2); border:1px solid var(--rule); border-radius:4px; padding:14px 16px; font-size:13px; color:var(--ink-soft); }
+  .combos b{ color:var(--ink); }
+
+  /* cautions */
+  .cautions{ display:grid; gap:10px; }
+  .caut{ display:grid; grid-template-columns:22px 1fr; gap:12px; background:var(--card); border:1px solid var(--rule); border-radius:4px; padding:13px 15px; }
+  .caut .cn{ color:var(--brick); font-weight:700; font-size:13px; }
+  .caut p{ font-size:13px; color:var(--ink-soft); }
+  .caut p b{ color:var(--ink); }
+
+  footer{ border-top:1px solid var(--rule); background:var(--paper-2); padding:26px 0 40px; }
+  footer .wrap{ font-size:12px; color:var(--muted); line-height:1.85; }
+  footer b{ color:var(--ink-soft); }
+
+  @media (max-width:760px){
+    .keys{ grid-template-columns:1fr; }
+    .radar-grid{ grid-template-columns:1fr; }
+    .cards{ grid-template-columns:1fr; }
+    .decide{ grid-template-columns:1fr; }
+    .pc-pn{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span>日本市場向け ・ 2026年7月時点</span>
+  <span class="note">価格・在庫はセールで変動します。買う直前にリンク先で最新価格をご確認ください。</span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">For CS2 · beginner-friendly</div>
+  <h1>CS2をやりたい人への、パソコンとモニターの選び方</h1>
+  <p>パソコンに詳しくない方でも選べるように、むずかしい言葉は横に短い説明を付けました。パソコン2種類・モニター2種類から、<b>使いみちに合わせて1つずつ</b>選ぶだけです。まずは3つの言葉だけ覚えれば大丈夫。</p>
+</div></header>
+
+<section><div class="wrap">
+  <div class="sec-head"><span class="num">01</span><h2>まず、3つの言葉だけ</h2>
+    <span class="sub">モニター選びは「大きさ・なめらかさ・きれいさ」の3つのバランス。同じ値段では全部は取れません。</span></div>
+  <div class="keys">
+    <div class="keycard"><div class="kk">なめらかさ</div><h3>リフレッシュレート（Hz）</h3>
+      <p>画面が1秒に何回書き換わるか。数字が大きいほど動きがヌルヌル。CS2など対戦では、敵が滑らかに見えて<b>一瞬早く反応</b>できます。</p>
+      <div class="ex">体感：60Hz＝普通のテレビ／144Hz＝ぬるっと速い／240Hz＝競技勢の標準</div></div>
+    <div class="keycard"><div class="kk">きれいさ</div><h3>解像度（1080p / 2K / 4K）</h3>
+      <p>画面のきめ細かさ。数字が上がるほど文字や風景がシャープに。ただし上げるほど<b>パソコンの負担も増えます</b>。</p>
+      <div class="ex">体感：1080p＝普通／2K(1440p)＝一回り精細／4K＝雑誌の写真みたい</div></div>
+    <div class="keycard"><div class="kk">大きさ</div><h3>画面サイズ（インチ）</h3>
+      <p>大きいほど迫力。ただし対戦では大きすぎると視線移動が増えて<b>逆に見づらい</b>ことも。</p>
+      <div class="ex">体感：24〜25型＝競技の定番／27型＝映像・RPG向けの迫力</div></div>
+  </div>
+  <div class="triangle-note">⚠ <b>三角形のジレンマ</b>：同じ予算では「大きさ・なめらかさ・きれいさ」を全部は満たせません。だから下のモニター①は<b>なめらかさに全振り（競技向け）</b>、②は<b>きれいさと大きさを優先（ふだん使い・映像向け）</b>。値段はどちらも約¥36,000で、<b>“何を優先するか”だけの違い</b>です。</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><span class="num">02</span><h2>モニター：2つの選択肢を比べる</h2>
+    <span class="sub">レーダーが外に広がっているほど得意。①は「なめらかさ・競技」、②は「きれいさ・大きさ・ふだん使い」に伸びています。</span></div>
+  <div class="radar-grid">
+    <div class="radar-wrap"><svg viewBox="0 0 380 350" xmlns="http://www.w3.org/2000/svg" class="radar" role="img" aria-label="比較レーダーチャート"><polygon points="190.0,145.6 211.3,161.1 203.2,186.1 176.8,186.1 168.7,161.1" fill="none" stroke="var(--rule)" stroke-width="1"/><polygon points="190.0,123.2 232.6,154.2 216.3,204.2 163.7,204.2 147.4,154.2" fill="none" stroke="var(--rule)" stroke-width="1"/><polygon points="190.0,100.8 253.9,147.2 229.5,222.4 150.5,222.4 126.1,147.2" fill="none" stroke="var(--rule)" stroke-width="1"/><polygon points="190.0,78.4 275.2,140.3 242.7,240.5 137.3,240.5 104.8,140.3" fill="none" stroke="var(--rule)" stroke-width="1"/><polygon points="190.0,56.0 296.5,133.4 255.8,258.6 124.2,258.6 83.5,133.4" fill="none" stroke="var(--rule)" stroke-width="1"/><line x1="190" y1="168" x2="190.0" y2="56.0" stroke="var(--rule-strong)" stroke-width="1"/><text x="190.0" y="35.0" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" font-weight="600">なめらかさ</text><line x1="190" y1="168" x2="296.5" y2="133.4" stroke="var(--rule-strong)" stroke-width="1"/><text x="315.5" y="131.2" text-anchor="start" font-size="11.5" fill="var(--ink-soft)" font-weight="600">きれいさ</text><line x1="190" y1="168" x2="255.8" y2="258.6" stroke="var(--rule-strong)" stroke-width="1"/><text x="267.6" y="285.8" text-anchor="start" font-size="11.5" fill="var(--ink-soft)" font-weight="600">大きさ</text><line x1="190" y1="168" x2="124.2" y2="258.6" stroke="var(--rule-strong)" stroke-width="1"/><text x="112.4" y="285.8" text-anchor="end" font-size="11.5" fill="var(--ink-soft)" font-weight="600">競技向き</text><line x1="190" y1="168" x2="83.5" y2="133.4" stroke="var(--rule-strong)" stroke-width="1"/><text x="64.5" y="131.2" text-anchor="end" font-size="11.5" fill="var(--ink-soft)" font-weight="600">ふだん使い</text><polygon points="190.0,56.0 253.9,147.2 229.5,222.4 124.2,258.6 126.1,147.2" fill="rgba(138,58,46,0.14)" stroke="#8A3A2E" stroke-width="2" stroke-linejoin="round"/><circle cx="190.0" cy="56.0" r="3" fill="#8A3A2E"/><circle cx="253.9" cy="147.2" r="3" fill="#8A3A2E"/><circle cx="229.5" cy="222.4" r="3" fill="#8A3A2E"/><circle cx="124.2" cy="258.6" r="3" fill="#8A3A2E"/><circle cx="126.1" cy="147.2" r="3" fill="#8A3A2E"/><polygon points="190.0,89.6 296.5,133.4 249.2,249.5 143.9,231.4 83.5,133.4" fill="rgba(95,116,134,0.17)" stroke="#5F7486" stroke-width="2" stroke-linejoin="round"/><circle cx="190.0" cy="89.6" r="3" fill="#5F7486"/><circle cx="296.5" cy="133.4" r="3" fill="#5F7486"/><circle cx="249.2" cy="249.5" r="3" fill="#5F7486"/><circle cx="143.9" cy="231.4" r="3" fill="#5F7486"/><circle cx="83.5" cy="133.4" r="3" fill="#5F7486"/></svg><div class="legend"><span class="lg"><i style="background:#8A3A2E"></i>① iiyama 240Hz</span><span class="lg"><i style="background:#5F7486"></i>② Dell 2K 165Hz</span></div></div>
+    <div class="axnote"><div class="an"><h4>なめらかさ<small>　リフレッシュレート・Hz</small></h4><p>画面が1秒に何回書き換わるか。多いほど動きがヌルヌル。<b>CS2など対戦では超重要</b>：敵が「カクッ」ではなく「スーッ」と見えて、一瞬早く撃てる。144Hzでも速いが、240Hzは競技勢の標準。（※FPS＝1秒間の画面書き換え回数。対戦は0.1秒の反応が勝敗を分けるので多いほど有利）</p></div><div class="an"><h4>きれいさ<small>　解像度・1080p / 2K / 4K</small></h4><p>画面のきめ細かさ。フルHD(1080p)＝普通、2K/WQHD(1440p)＝くっきり、4K＝超くっきり。<b>体感</b>は「文字や風景の輪郭のシャープさ」。ただし上げるほどPCの負担も増える。</p></div><div class="an"><h4>大きさ<small>　画面サイズ・インチ</small></h4><p>24.5型＝競技の定番（視線移動が少なく敵を見落としにくい）、27型＝映像やRPGに迫力。<b>大きすぎると対戦では逆に見づらい</b>ことも。</p></div><div class="an"><h4>競技向き / ふだん使い<small>　使いみちの結果</small></h4><p>速さ重視の①は対戦で有利。きれいさ・大きさ重視の②は映像・RPG・作業で快適。どちらが「上」ではなく、<b>目的が違う</b>。</p></div></div>
+  </div>
+  <div style="height:16px"></div>
+  <div class="cards"><article class="pcard">
+      <div class="pc-badge">モニター ①（高FPS・競技特化）</div>
+      <h4>iiyama G-MASTER GB2590HSU-B5A</h4>
+      <p class="pc-sub">CS2で勝ちたい人へ（なめらかさ全振り）</p>
+      <ul class="pc-spec"><li>サイズ：24.5型</li><li>解像度：フルHD（1080p）</li><li>なめらかさ：240Hz／Fast IPS</li></ul>
+      <div class="pc-price"><b>約 ¥36,000</b><span>実売はもう少し安いことも</span></div>
+      <div class="pc-meta"><span class="chip">保証 3年</span><span class="chip soft">iiyama（マウス系）・日本サポート</span></div>
+      <div class="pc-who">こんな人に：<b>対戦・撃ち合い重視。勝ちにいく人。</b></div>
+      <div class="pc-pn"><div class="pc-pros"><span class="ph">良いところ</span><ul><li>240Hzで動きがヌルヌル</li><li>敵に一瞬早く反応できる</li><li>24.5型は競技の定番サイズ</li></ul></div>
+        <div class="pc-cons"><span class="ph">弱いところ</span><ul><li>解像度は普通（映像のきれいさは②に劣る）</li><li>画面は少し小さめ</li></ul></div></div>
+      
+      <div class="pc-links"><a class="btn" href="https://www.amazon.co.jp/s?k=iiyama+GB2590HSU-B5A" target="_blank" rel="noopener">Amazonで探す ↗</a></div>
+    </article><article class="pcard">
+      <div class="pc-badge">モニター ②（きれいさ・大画面）</div>
+      <h4>Dell G2724D</h4>
+      <p class="pc-sub">映像もRPGもきれいに楽しみたい人へ</p>
+      <ul class="pc-spec"><li>サイズ：27型</li><li>解像度：WQHD（2K／1440p）</li><li>なめらかさ：165Hz／Fast IPS</li></ul>
+      <div class="pc-price"><b>約 ¥36,000</b><span>セール時は¥30,000前後も</span></div>
+      <div class="pc-meta"><span class="chip">保証 3年（無輝点交換）</span><span class="chip soft">Dell（世界的大手）・Amazon在庫◎</span></div>
+      <div class="pc-who">こんな人に：<b>きれいさ・大画面重視。ゲームも映像も。</b></div>
+      <div class="pc-pn"><div class="pc-pros"><span class="ph">良いところ</span><ul><li>2Kで映像・文字がくっきり</li><li>27型で迫力・作業も快適</li><li>165Hzでゲームも十分なめらか</li></ul></div>
+        <div class="pc-cons"><span class="ph">弱いところ</span><ul><li>240Hzより“速さ”は控えめ</li><li>競技ガチ勢には①が上</li></ul></div></div>
+      
+      <div class="pc-links"><a class="btn" href="https://www.amazon.co.jp/dp/B0C9PVL4FM" target="_blank" rel="noopener">Amazonで見る ↗</a></div>
+    </article></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><span class="num">03</span><h2>パソコン：2つの選択肢を比べる</h2>
+    <span class="sub">CS2性能はA・Bとも満点（どちらも余裕）。違いは「重いゲームの強さ・値段・保証・拡張性」。Bは何でも強いぶん高く、Aは安いぶん重いゲームは控えめ。</span></div>
+  <div class="radar-grid">
+    <div class="radar-wrap"><svg viewBox="0 0 380 350" xmlns="http://www.w3.org/2000/svg" class="radar" role="img" aria-label="比較レーダーチャート"><polygon points="190.0,145.6 211.3,161.1 203.2,186.1 176.8,186.1 168.7,161.1" fill="none" stroke="var(--rule)" stroke-width="1"/><polygon points="190.0,123.2 232.6,154.2 216.3,204.2 163.7,204.2 147.4,154.2" fill="none" stroke="var(--rule)" stroke-width="1"/><polygon points="190.0,100.8 253.9,147.2 229.5,222.4 150.5,222.4 126.1,147.2" fill="none" stroke="var(--rule)" stroke-width="1"/><polygon points="190.0,78.4 275.2,140.3 242.7,240.5 137.3,240.5 104.8,140.3" fill="none" stroke="var(--rule)" stroke-width="1"/><polygon points="190.0,56.0 296.5,133.4 255.8,258.6 124.2,258.6 83.5,133.4" fill="none" stroke="var(--rule)" stroke-width="1"/><line x1="190" y1="168" x2="190.0" y2="56.0" stroke="var(--rule-strong)" stroke-width="1"/><text x="190.0" y="35.0" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)" font-weight="600">CS2性能</text><line x1="190" y1="168" x2="296.5" y2="133.4" stroke="var(--rule-strong)" stroke-width="1"/><text x="315.5" y="131.2" text-anchor="start" font-size="11.5" fill="var(--ink-soft)" font-weight="600">重いゲーム</text><line x1="190" y1="168" x2="255.8" y2="258.6" stroke="var(--rule-strong)" stroke-width="1"/><text x="267.6" y="285.8" text-anchor="start" font-size="11.5" fill="var(--ink-soft)" font-weight="600">安さ</text><line x1="190" y1="168" x2="124.2" y2="258.6" stroke="var(--rule-strong)" stroke-width="1"/><text x="112.4" y="285.8" text-anchor="end" font-size="11.5" fill="var(--ink-soft)" font-weight="600">安心(保証)</text><line x1="190" y1="168" x2="83.5" y2="133.4" stroke="var(--rule-strong)" stroke-width="1"/><text x="64.5" y="131.2" text-anchor="end" font-size="11.5" fill="var(--ink-soft)" font-weight="600">長持ち</text><polygon points="190.0,56.0 253.9,147.2 249.2,249.5 137.3,240.5 136.7,150.7" fill="rgba(138,58,46,0.14)" stroke="#8A3A2E" stroke-width="2" stroke-linejoin="round"/><circle cx="190.0" cy="56.0" r="3" fill="#8A3A2E"/><circle cx="253.9" cy="147.2" r="3" fill="#8A3A2E"/><circle cx="249.2" cy="249.5" r="3" fill="#8A3A2E"/><circle cx="137.3" cy="240.5" r="3" fill="#8A3A2E"/><circle cx="136.7" cy="150.7" r="3" fill="#8A3A2E"/><polygon points="190.0,56.0 296.5,133.4 222.9,213.3 130.8,249.5 104.8,140.3" fill="rgba(95,116,134,0.17)" stroke="#5F7486" stroke-width="2" stroke-linejoin="round"/><circle cx="190.0" cy="56.0" r="3" fill="#5F7486"/><circle cx="296.5" cy="133.4" r="3" fill="#5F7486"/><circle cx="222.9" cy="213.3" r="3" fill="#5F7486"/><circle cx="130.8" cy="249.5" r="3" fill="#5F7486"/><circle cx="104.8" cy="140.3" r="3" fill="#5F7486"/></svg><div class="legend"><span class="lg"><i style="background:#8A3A2E"></i>A｜HP OMEN 16L</span><span class="lg"><i style="background:#5F7486"></i>B｜GALLERIA 5070</span></div></div>
+    <div class="axnote"><div class="an"><h4>CS2性能<small>　CS2のなめらかさ</small></h4><p>CS2がどれだけヌルヌル動くか。<b>A・Bどちらも240fps以上</b>出て、240Hzモニターを完全に活かせる。CS2だけなら差はほぼ無し。</p></div><div class="an"><h4>重いゲーム<small>　3Dゲームの強さ・グラボ性能</small></h4><p>グラフィックが重いゲーム（例：サイバーパンク、モンハン）をきれいな設定で動かす力。<b>グラボ(GPU)で決まる</b>。RTX 5060＝そこそこ／RTX 5070＝かなり余裕。</p></div><div class="an"><h4>安さ<small>　本体価格</small></h4><p>CS2しかやらないなら、安いA（HP）で十分。無理に高い方を選ぶ必要はない。</p></div><div class="an"><h4>安心(保証) / 長持ち<small>　保証年数・拡張性</small></h4><p>保証＝壊れたとき無料で直せる期間。A(HP)＝1年・世界的大手／B(GALLERIA)＝3年＋電話。長く安心なら年数も見る。小型のAは後の拡張がしにくい。</p></div></div>
+  </div>
+  <div style="height:16px"></div>
+  <div class="cards"><article class="pcard">
+      <div class="pc-badge">パソコン A</div>
+      <h4>HP OMEN 16L</h4>
+      <p class="pc-sub">CS2が快適に遊べれば十分な人へ</p>
+      <ul class="pc-spec"><li>CPU：Ryzen 5 8400F</li><li>グラボ：GeForce RTX 5060</li><li>メモリ 16GB／SSD 1TB</li></ul>
+      <div class="pc-price"><b>約 17〜20万円</b><span>Amazon・セールで変動</span></div>
+      <div class="pc-meta"><span class="chip">保証 1年（延長可）</span><span class="chip soft">世界的大手 HP・安心感◎</span></div>
+      <div class="pc-who">こんな人に：<b>CS2メイン。たまに軽いゲームも。</b></div>
+      <div class="pc-pn"><div class="pc-pros"><span class="ph">良いところ</span><ul><li>世界大手ブランドで安心</li><li>この構成では最安クラス</li><li>CS2は300fps以上で余裕</li></ul></div>
+        <div class="pc-cons"><span class="ph">弱いところ</span><ul><li>重いゲームを高画質で…は苦手</li><li>小型ケースで後の拡張がしにくい</li></ul></div></div>
+      
+      <div class="pc-links"><a class="btn" href="https://www.amazon.co.jp/s?k=HP+OMEN+16L+RTX+5060" target="_blank" rel="noopener">Amazonで探す ↗</a></div>
+    </article><article class="pcard">
+      <div class="pc-badge">パソコン B</div>
+      <h4>GALLERIA（RTX 5070搭載）</h4><div class="pc-model">型番例：XPR7A-R57-GD</div>
+      <p class="pc-sub">CS2に加えて重い3Dゲームも楽しみたい人へ</p>
+      <ul class="pc-spec"><li>CPU：Ryzen 7 7700（8コア）</li><li>グラボ：GeForce RTX 5070</li><li>メモリ 16GB／SSD 1TB</li></ul>
+      <div class="pc-price"><b>約 27万円〜</b><span>ドスパラ価格・変動</span></div>
+      <div class="pc-meta"><span class="chip">保証 3年＋電話サポート</span><span class="chip soft">日本最大のBTO・サポート手厚い</span></div>
+      <div class="pc-who">こんな人に：<b>CS2＋重い3Dゲーム（例：サイバーパンク）も本格的に。</b></div>
+      <div class="pc-pn"><div class="pc-pros"><span class="ph">良いところ</span><ul><li>RTX 5070で3Dゲームも余裕</li><li>8コアCPUで配信・作業も快適</li><li>保証3年で長く安心</li></ul></div>
+        <div class="pc-cons"><span class="ph">弱いところ</span><ul><li>価格は高め</li><li>CS2だけなら性能を持て余す</li></ul></div></div>
+      <p class="pc-note">GALLERIAは主にドスパラ公式で販売。Amazonにこの型番が無い場合があります。</p>
+      <div class="pc-links"><a class="btn" href="https://www.dospara.co.jp/TC30?prefn1=txGraphicFilter&prefv1=GeForce+RTX+5070" target="_blank" rel="noopener">ドスパラ公式で見る ↗</a><a class="btn ghost" href="https://www.amazon.co.jp/s?k=GALLERIA+RTX+5070" target="_blank" rel="noopener">Amazonで探す</a></div>
+    </article></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><span class="num">04</span><h2>結局、どれを選ぶ？</h2>
+    <span class="sub">2つの質問に答えるだけ。パソコン1台＋モニター1台を選びます。</span></div>
+  <div class="decide">
+    <div class="dbox"><h3>パソコンは？</h3>
+      <div class="drow"><span class="q">CS2が中心。他はたまに</span><span class="a">→ A（HP OMEN 16L・RTX 5060）</span></div>
+      <div class="drow"><span class="q">CS2＋重い3Dゲームも本格的に</span><span class="a">→ B（GALLERIA・RTX 5070）</span></div>
+    </div>
+    <div class="dbox"><h3>モニターは？</h3>
+      <div class="drow"><span class="q">対戦で勝ちたい・撃ち合い重視</span><span class="a">→ ①（iiyama 240Hz・1080p）</span></div>
+      <div class="drow"><span class="q">きれいさ・大画面で映像も楽しむ</span><span class="a">→ ②（Dell 2K・165Hz・27型）</span></div>
+    </div>
+  </div>
+  <div class="combos">組み合わせの例：<b>がっつり競技</b>なら「B＋①」／<b>ふだんゲーム＋きれい</b>なら「A＋②」／<b>いちばん安く済ませる</b>なら「A＋①」。CS2だけが目的なら、パソコンはA・モニターは①で十分です。</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><span class="num">05</span><h2>買う前に知っておくこと</h2>
+    <span class="sub">損をしないための、やさしい注意点。</span></div>
+  <div class="cautions">
+    <div class="caut"><span class="cn">1</span><p><b>CS2にグラボ（GPU）は盛りすぎない。</b> CS2はRTX 5060でも余裕で300fps以上。RTX 5070は「他の重いゲームもやる人」向けで、CS2のためだけに高いグラボは要りません。</p></div>
+    <div class="caut"><span class="cn">2</span><p><b>今のパソコンで足りるかも。</b> もし今のPCですでにCS2が240fps以上出るなら、<b>モニターだけ</b>買えばOK。まず今のfpsを確認しましょう。</p></div>
+    <div class="caut"><span class="cn">3</span><p><b>値段はセールで大きく動く。</b> HP・Dellは特にセールが多く、表示は目安です。買う直前にリンク先の最新価格を確認してください。</p></div>
+    <div class="caut"><span class="cn">4</span><p><b>保証年数を見る。</b> GALLERIA・Dell・iiyamaは3年、HPは1年（延長可）。長く安心したいなら年数もチェック。</p></div>
+    <div class="caut"><span class="cn">5</span><p><b>モニターは1台でOK。</b> ①と②は「どちらが好みか」で1つ選ぶもの。両方は要りません。</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>データについて</b>：2026年7月時点で、公式ストア・Amazon.co.jp・国内の価格情報を参照した目安です。価格・在庫・型番は時期により変わります。<br>
+  レーダーチャートの数値は、価格・スペック・用途をもとにした<b>わかりやすさ優先の相対評価（5段階）</b>で、正確なベンチマーク値ではありません。<br>
+  リンクは各販売ページ／Amazon検索へ移動します。GALLERIAは主にドスパラ公式で販売しています。宣伝目的の順位付けは行っていません。
+</div></footer>
+
+</body>
+</html>
